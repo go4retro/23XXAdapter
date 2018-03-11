@@ -1,4 +1,4 @@
-2364 Adapter Schematic and Printed Circuit Board v1.0
+2316/32/64 Adapter Schematic and Printed Circuit Board v1.0
 Copyright (C) 2010  Jim Brain
 
 These files are free designs; you can redistribute them and/or modify
