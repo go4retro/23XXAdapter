@@ -3587,6 +3587,12 @@ Source: 8x ADG1408_1409.pdf</description>
 <part name="SUPPLY6" library="supply2" deviceset="VCC" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="VCC" device=""/>
 <part name="SUPPLY8" library="supply2" deviceset="VCC" device=""/>
+<part name="SUPPLY9" library="supply2" deviceset="VCC" device=""/>
+<part name="SUPPLY10" library="supply2" deviceset="VCC" device=""/>
+<part name="SUPPLY11" library="supply2" deviceset="VCC" device=""/>
+<part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY13" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY14" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3651,6 +3657,15 @@ Source: 8x ADG1408_1409.pdf</description>
 <instance part="SUPPLY6" gate="G$1" x="76.2" y="167.64"/>
 <instance part="SUPPLY7" gate="G$1" x="81.28" y="167.64"/>
 <instance part="SUPPLY8" gate="G$1" x="91.44" y="167.64"/>
+<instance part="IC2" gate="P" x="5.08" y="20.32"/>
+<instance part="IC1" gate="G$2" x="25.4" y="20.32"/>
+<instance part="HDR1" gate="P" x="15.24" y="20.32"/>
+<instance part="SUPPLY9" gate="G$1" x="5.08" y="35.56"/>
+<instance part="SUPPLY10" gate="G$1" x="15.24" y="35.56"/>
+<instance part="SUPPLY11" gate="G$1" x="25.4" y="35.56"/>
+<instance part="SUPPLY12" gate="GND" x="5.08" y="5.08" rot="MR0"/>
+<instance part="SUPPLY13" gate="GND" x="15.24" y="5.08" rot="MR0"/>
+<instance part="SUPPLY14" gate="GND" x="25.4" y="5.08" rot="MR0"/>
 </instances>
 <busses>
 <bus name="A[0..15]">
@@ -3943,6 +3958,15 @@ Source: 8x ADG1408_1409.pdf</description>
 <wire x1="99.06" y1="96.52" x2="73.66" y2="96.52" width="0.1524" layer="91"/>
 <label x="93.98" y="96.52" size="1.778" layer="95"/>
 <pinref part="18" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="129.54" x2="68.58" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="129.54" x2="68.58" y2="101.6" width="0.1524" layer="91"/>
+<label x="104.14" y="129.54" size="1.778" layer="95"/>
+<pinref part="HDR1" gate="A" pin="A11"/>
+<pinref part="18" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="96.52" x2="68.58" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="96.52" x2="68.58" y2="101.6" width="0.1524" layer="91"/>
+<junction x="73.66" y="96.52"/>
+<junction x="68.58" y="101.6"/>
 </segment>
 <segment>
 <pinref part="X1" gate="1" pin="6"/>
@@ -3967,6 +3991,15 @@ Source: 8x ADG1408_1409.pdf</description>
 <wire x1="99.06" y1="81.28" x2="88.9" y2="81.28" width="0.1524" layer="91"/>
 <label x="93.98" y="81.28" size="1.778" layer="95"/>
 <pinref part="21" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="127" x2="83.82" y2="127" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="127" x2="83.82" y2="86.36" width="0.1524" layer="91"/>
+<label x="104.14" y="127" size="1.778" layer="95"/>
+<pinref part="HDR1" gate="A" pin="A12"/>
+<pinref part="21" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="81.28" x2="83.82" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="81.28" x2="83.82" y2="86.36" width="0.1524" layer="91"/>
+<junction x="88.9" y="81.28"/>
+<junction x="83.82" y="86.36"/>
 </segment>
 <segment>
 <pinref part="X1" gate="1" pin="5"/>
@@ -4049,6 +4082,21 @@ Source: 8x ADG1408_1409.pdf</description>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
 <pinref part="X1" gate="1" pin="1"/>
 </segment>
+<segment>
+<pinref part="IC2" gate="P" pin="GND"/>
+<pinref part="SUPPLY12" gate="GND" pin="GND"/>
+<wire x1="5.08" y1="10.16" x2="5.08" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="HDR1" gate="P" pin="GND"/>
+<pinref part="SUPPLY13" gate="GND" pin="GND"/>
+<wire x1="15.24" y1="12.7" x2="15.24" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$2" pin="GND"/>
+<pinref part="SUPPLY14" gate="GND" pin="GND"/>
+<wire x1="25.4" y1="12.7" x2="25.4" y2="7.62" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -4082,6 +4130,21 @@ Source: 8x ADG1408_1409.pdf</description>
 <pinref part="IC2" gate="A" pin="G1"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
 </segment>
+<segment>
+<pinref part="SUPPLY9" gate="G$1" pin="VCC"/>
+<pinref part="IC2" gate="P" pin="VCC"/>
+<wire x1="5.08" y1="33.02" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY10" gate="G$1" pin="VCC"/>
+<pinref part="HDR1" gate="P" pin="VCC"/>
+<wire x1="15.24" y1="33.02" x2="15.24" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY11" gate="G$1" pin="VCC"/>
+<pinref part="IC1" gate="G$2" pin="VCC"/>
+<wire x1="25.4" y1="33.02" x2="25.4" y2="27.94" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="A15" class="0">
 <segment>
@@ -4099,15 +4162,6 @@ Source: 8x ADG1408_1409.pdf</description>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="63.5" y1="137.16" x2="91.44" y2="137.16" width="0.1524" layer="91"/>
 <junction x="91.44" y="137.16"/>
-</segment>
-</net>
-<net name="GA12" class="0">
-<segment>
-<wire x1="119.38" y1="127" x2="83.82" y2="127" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="127" x2="83.82" y2="86.36" width="0.1524" layer="91"/>
-<label x="104.14" y="127" size="1.778" layer="95"/>
-<pinref part="HDR1" gate="A" pin="A12"/>
-<pinref part="21" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="!OE" class="0">
@@ -4152,6 +4206,15 @@ Source: 8x ADG1408_1409.pdf</description>
 <pinref part="1" gate="1" pin="1"/>
 <pinref part="IC1" gate="G$1" pin="!OE"/>
 <pinref part="20" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="121.92" x2="76.2" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="121.92" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
+<label x="104.14" y="121.92" size="1.778" layer="95"/>
+<pinref part="HDR1" gate="A" pin="CS"/>
+<pinref part="20" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="88.9" x2="76.2" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="88.9" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
+<junction x="81.28" y="88.9"/>
+<junction x="76.2" y="93.98"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -4221,15 +4284,6 @@ Source: 8x ADG1408_1409.pdf</description>
 <pinref part="IC2" gate="A" pin="C"/>
 </segment>
 </net>
-<net name="!GCE" class="0">
-<segment>
-<wire x1="119.38" y1="121.92" x2="76.2" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="121.92" x2="76.2" y2="93.98" width="0.1524" layer="91"/>
-<label x="104.14" y="121.92" size="1.778" layer="95"/>
-<pinref part="HDR1" gate="A" pin="CS"/>
-<pinref part="20" gate="G$1" pin="2"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <wire x1="60.96" y1="78.74" x2="60.96" y2="83.82" width="0.1524" layer="91"/>
@@ -4240,15 +4294,6 @@ Source: 8x ADG1408_1409.pdf</description>
 <pinref part="20" gate="G$1" pin="3"/>
 <pinref part="B" gate="1" pin="1"/>
 <pinref part="IC2" gate="A" pin="B"/>
-</segment>
-</net>
-<net name="GA11" class="0">
-<segment>
-<wire x1="119.38" y1="129.54" x2="68.58" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="129.54" x2="68.58" y2="101.6" width="0.1524" layer="91"/>
-<label x="104.14" y="129.54" size="1.778" layer="95"/>
-<pinref part="HDR1" gate="A" pin="A11"/>
-<pinref part="18" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$16" class="0">
